@@ -12,6 +12,9 @@ public class Main {
             System.out.println("Connection successfully");
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
+            for (StackTraceElement entry : ex.getStackTrace()){
+                System.out.println(entry.getMethodName());
+            }
         }
     }
 }
